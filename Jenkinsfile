@@ -5,22 +5,22 @@ pipeline{
   }
 stages{
 	stage('Checkout'){
-	Steps{
+	steps{
 		git branch:'master',url:'https://github.com/varun0981/MyMavenApp7.git'
 	}
 }
-	Stage('Build'){
-	Steps{
-		sh'mvn clean packages'
+	stage('Build'){
+	steps{
+		sh'mvn clean package'
 	}
 }
-	Stage('Test'){
-	Steps{
+	stage('Test'){
+	steps{
 		sh'mvn test'
 	}
 }
-	Stage('Run Application'){
-	Steps{
+	stage('Run Application'){
+	steps{
 		sh'java -jar target/MyMavenApp7-1.0-SNAPSHOT.jar'
 
 	}
