@@ -3,7 +3,6 @@ pipeline{
   tools{
       maven 'Maven'
   }
-}
 stages{
 	stage('Checkout'){
 	Steps{
@@ -22,9 +21,10 @@ stages{
 }
 	Stage('Run Application'){
 	Steps{
-		sh'java -jar target/'MyMavenApp7-1.0-SNAPSHOT.jar'
+		sh'java -jar target/MyMavenApp7-1.0-SNAPSHOT.jar
 
 	}
 	}
+}
 }
 
