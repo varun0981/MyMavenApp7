@@ -3,8 +3,9 @@ pipeline{
   tools{
       maven 'Maven'
   }
-Stages{
-	Stage('Checkout'){
+}
+stages{
+	stage('Checkout'){
 	Steps{
 		git branch:'master',url:'https://github.com/varun0981/MyMavenApp7.git'
 	}
@@ -26,4 +27,4 @@ Stages{
 	}
 	}
 }
-}
+
